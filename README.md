@@ -4,33 +4,42 @@
 
 This repository contains the data analysis for an experiment investigating people's narrative perceptions of short form videos. The study examines how individuals perceive and evaluate narrative elements in short-form video content, with the goal of understanding the psychological factors that influence narrative comprehension and engagement.
 
-## Experiment Design
+## Experiment Design (Sample Data)
 
-- **Participants**: [Number] participants recruited for the study
+> **Note**: This repository contains analysis of sample data from an ongoing study. Results are preliminary and for demonstration purposes.
+
+- **Participants**: 122 participants recruited for the study
 - **Videos**: 40 short form videos representing diverse content types
 - **Procedure**: Each participant watched 4 randomly selected videos and provided narrative perception ratings
-- **Measures**: Ratings on narrative clarity, emotional impact, story coherence, engagement, and complexity
+- **Total Responses**: 488 video ratings (122 participants × 4 videos each)
+- **Data Collection Period**: September 25 - October 7, 2025 (12 days)
+- **Measures**: Comprehensive ratings on timing, familiarity, comprehension, tension, resolution, and future behavior
 
 ## Repository Structure
 
 ```
 short-form-video-narrative-analysis/
-├── README.md                           # This file
-├── .gitignore                         # Git ignore rules
-├── code/                              # Analysis code
-│   ├── data_cleaning.py              # Data cleaning and preprocessing
-│   └── analysis.py                   # Statistical analysis functions
-├── data/                              # Data files
-│   ├── README.md                     # Data documentation
-│   ├── raw/                          # Original, unprocessed data
-│   └── processed/                    # Cleaned and processed data
-├── docs/                              # Documentation
-│   ├── experiment_design.md          # Detailed experiment methodology
-│   └── data_analysis_plan.md         # Comprehensive analysis plan
-├── notebooks/                         # Jupyter notebooks
-│   └── exploratory_analysis.ipynb    # Exploratory data analysis
-└── scripts/                           # Utility scripts
-    └── setup_environment.py          # Environment setup script
+├── README.md                                    # This file
+├── .gitignore                                  # Git ignore rules
+├── code/                                       # Analysis code
+│   ├── data_cleaning.py                       # Data cleaning and preprocessing
+│   └── simple_descriptive_analysis.py         # Descriptive analysis functions
+├── data/                                       # Data files
+│   ├── README.md                              # Data documentation
+│   ├── SML+Narrative+Resolution+-+REP_October+7,+2025_16.56.csv  # Raw data
+│   ├── video_narrative_cleaned_wide_format.csv # Cleaned wide format data
+│   ├── video_narrative_cleaned_long_format.csv # Cleaned long format data
+│   └── video_narrative_cleaned_quality_report.txt # Data quality report
+├── docs/                                       # Documentation
+│   ├── experiment_design.md                   # Detailed experiment methodology
+│   ├── data_analysis_plan.md                  # Comprehensive analysis plan
+│   ├── data_cleaning_documentation.md         # Data cleaning procedures
+│   └── descriptive_analysis_documentation.md  # Analysis results and findings
+├── analysis_outputs/                           # Analysis results
+│   ├── simple_descriptive_analysis_report.md  # Summary report
+│   └── simple_descriptive_analysis.png        # Key visualizations
+└── scripts/                                    # Utility scripts
+    └── setup_environment.py                   # Environment setup script
 ```
 
 ## Getting Started
@@ -53,9 +62,9 @@ short-form-video-narrative-analysis/
    python scripts/setup_environment.py
    ```
 
-3. Start Jupyter notebook for exploratory analysis:
+3. Run the descriptive analysis:
    ```bash
-   jupyter notebook notebooks/exploratory_analysis.ipynb
+   python code/simple_descriptive_analysis.py
    ```
 
 ### Required Packages
@@ -74,23 +83,57 @@ short-form-video-narrative-analysis/
 2. **Secondary**: What individual differences predict narrative perception patterns?
 3. **Exploratory**: Are there consistent patterns in how different narrative elements are evaluated?
 
-## Key Measures
+## Key Measures (Sample Data Results)
 
-- **Narrative Clarity**: How clear and understandable is the narrative structure?
-- **Emotional Impact**: How emotionally engaging is the video content?
-- **Story Coherence**: How well-structured and coherent is the story?
-- **Engagement**: How engaging and compelling is the overall experience?
-- **Narrative Complexity**: How complex or simple is the narrative structure?
+### Timing Variables
+- **timing_first_click**: 9.85 ± 33.33 seconds
+- **timing_last_click**: 16.65 ± 41.61 seconds  
+- **timing_page_submit**: 82.31 ± 331.03 seconds
+- **timing_click_count**: 0.71 ± 1.91 clicks
 
-## Analysis Approach
+### Familiarity Variables
+- **familiarity_seen**: 52.9% "None of the above"
+- **familiarity_plot**: 36.1% "Strongly disagree"
+- **familiarity_characters**: 29.1% "Strongly disagree"
 
-The analysis follows a comprehensive multi-phase approach:
+### Comprehension Variables
+- **clear_starting_point**: 40.0% "Somewhat agree"
+- **inferring_context**: 44.7% "Somewhat agree"
+- **built_interest_tension**: 42.6% "Somewhat agree"
+- **clear_outcome**: 34.2% "Somewhat agree"
+- **logical_flow**: 41.0% "Somewhat agree"
 
-1. **Data Preparation**: Cleaning, validation, and quality assessment
-2. **Descriptive Analysis**: Understanding patterns in the data
-3. **Primary Analysis**: Statistical tests for main research questions
-4. **Advanced Modeling**: Multilevel modeling and machine learning approaches
-5. **Exploratory Analysis**: Pattern discovery and subgroup analysis
+### Tension Variables
+- **tension_beginning**: 31.50 ± 25.46 (scale 0-100)
+- **tension_middle**: 46.99 ± 24.70 (scale 0-100)
+- **tension_end**: 47.05 ± 31.73 (scale 0-100)
+
+### Resolution Variables
+- **narrative_resolution**: 60.0% "No"
+- **satisfactory_resolution**: 79.5% "Yes" (when resolution present)
+- **concluded_scene**: 65.0% "No"
+
+### Future Behavior Variables
+- **want_next_story**: 35.2% "Somewhat agree"
+- **want_broader_context**: 36.1% "Somewhat agree"
+- **watch_full_episode**: 27.3% "Somewhat agree"
+
+## Analysis Status
+
+### ✅ Completed
+1. **Data Preparation**: ✅ Cleaning, validation, and quality assessment completed
+2. **Descriptive Analysis**: ✅ Comprehensive descriptive analysis with 488 responses analyzed
+3. **Data Quality Assessment**: ✅ 100% response rates, balanced video coverage
+
+### 🔄 In Progress / Planned
+4. **Primary Analysis**: Statistical tests for main research questions
+5. **Advanced Modeling**: Multilevel modeling and machine learning approaches
+6. **Exploratory Analysis**: Pattern discovery and subgroup analysis
+
+### 📊 Current Findings
+- **Sample Quality**: Excellent data completeness with 122 participants, 40 videos, 488 total responses
+- **Experimental Design**: Successfully implemented balanced sampling (each participant rated 4 videos)
+- **Response Patterns**: Moderate narrative comprehension, effective tension building, resolution challenges
 
 ## Data Privacy and Ethics
 
@@ -109,8 +152,8 @@ This is a research repository. For questions about the analysis or data, please 
 
 ## Contact
 
-- **Principal Investigator**: [Name and contact information]
-- **Research Team**: [Additional team member information]
+- **Repository**: [https://github.com/HarryYJYan/short-form-video-narrative-analysis](https://github.com/HarryYJYan/short-form-video-narrative-analysis)
+- **Data Analysis**: This repository contains sample data analysis for demonstration purposes
 
 ## Citation
 
@@ -123,4 +166,4 @@ If you use this code or data in your research, please cite:
 ## Acknowledgments
 
 - Thanks to all participants who contributed their time to this research
-- [Additional acknowledgments for funding, collaborators, etc.]
+- Sample data provided for analysis demonstration and method validation

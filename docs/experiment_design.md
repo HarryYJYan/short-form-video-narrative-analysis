@@ -5,11 +5,13 @@ How do people perceive and evaluate narratives in short form videos, and what fa
 
 ## Experimental Design
 
-### Overview
+### Overview (Sample Data Results)
 - **Design**: Between-subjects randomized experiment
-- **Participants**: [To be determined] participants
-- **Stimuli**: 40 short form videos (randomly selected from a larger pool)
-- **Procedure**: Each participant watches 4 randomly selected videos and provides ratings
+- **Participants**: 122 participants successfully recruited
+- **Stimuli**: 40 short form videos representing diverse content types
+- **Procedure**: Each participant watched 4 randomly selected videos and provided ratings
+- **Data Collection Period**: September 25 - October 7, 2025 (12 days)
+- **Total Responses**: 488 video ratings (122 participants × 4 videos each)
 
 ### Video Selection
 - **Total Pool**: 40 short form videos
@@ -21,14 +23,17 @@ How do people perceive and evaluate narratives in short form videos, and what fa
   - Different emotional tones
   - Representative of popular short form content
 
-### Participant Selection
-- **Target Population**: [Demographic criteria]
-- **Sample Size**: [To be calculated based on power analysis]
-- **Recruitment**: [Method of recruitment]
+### Participant Selection (Sample Data Results)
+- **Target Population**: General population with internet access
+- **Sample Size**: 122 participants successfully recruited
+- **Recruitment**: Online recruitment through survey platform
 - **Inclusion Criteria**: 
   - Age 18+
-  - Regular short form video consumption
+  - Internet access for video viewing
   - Informed consent
+  - Complete survey participation
+- **Language**: All participants used English interface (UserLanguage = 'EN')
+- **Session Duration**: Mean 34.7 ± 110.1 minutes (median: 18.9 minutes)
 
 ### Experimental Procedure
 1. **Consent and Demographics**: Participants complete informed consent and demographic questionnaire
@@ -36,19 +41,24 @@ How do people perceive and evaluate narratives in short form videos, and what fa
 3. **Rating Task**: After each video, participants complete narrative perception ratings
 4. **Debriefing**: Participants are debriefed about the study purpose
 
-## Measures
+## Measures (Sample Data Implementation)
 
-### Primary Measures
-1. **Narrative Clarity**: How clear and understandable is the narrative?
-2. **Emotional Impact**: How emotionally engaging is the video?
-3. **Story Coherence**: How well-structured and coherent is the story?
-4. **Engagement**: How engaging and compelling is the overall experience?
-5. **Narrative Complexity**: How complex or simple is the narrative structure?
+### Primary Measures (28 Total Variables)
+1. **Timing Variables (4)**: First click, last click, page submit timing, click count
+2. **Familiarity Variables (3)**: Prior exposure, plot familiarity, character familiarity
+3. **Comprehension Variables (5)**: Starting point clarity, context inference, interest building, outcome clarity, logical flow
+4. **Tension Variables (5)**: Beginning/middle/end tension levels, tension introduction, tension resolution
+5. **Resolution Variables (5)**: Narrative resolution presence, satisfaction, scene conclusion, episode/season position
+6. **Future Behavior Variables (6)**: Desire for next story, broader context, full episode, comments, comment purpose
 
-### Rating Scale
-- **Scale**: 7-point Likert scale (1 = strongly disagree, 7 = strongly agree)
-- **Presentation**: Ratings collected immediately after each video
-- **Randomization**: Order of rating questions randomized to avoid order effects
+### Rating Scales (Sample Data Results)
+- **Likert Scales**: 1-7 point scales (Strongly disagree to Strongly agree)
+- **Numeric Scales**: 0-100 point scales for tension ratings
+- **Binary Scales**: Yes/No responses for resolution questions
+- **Categorical Scales**: Multiple choice for episode position, comment purposes
+- **Timing Measures**: Continuous numeric data in seconds
+- **Presentation**: Ratings collected immediately after each video viewing
+- **Response Patterns**: "Somewhat agree" most common for comprehension measures
 
 ### Demographic Measures
 - Age
