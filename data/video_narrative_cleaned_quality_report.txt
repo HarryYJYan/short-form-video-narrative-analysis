@@ -1,0 +1,12 @@
+DATA QUALITY REPORT
+==================
+
+Total observations: 4880
+Unique participants: 122
+Unique videos: 40
+
+Missing Data Summary:
+  video_id: 0 (0.0%)
+  ResponseId: 0 (0.0%)
+
+Quality Issues:
