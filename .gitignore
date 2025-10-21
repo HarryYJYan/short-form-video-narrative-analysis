@@ -131,10 +131,15 @@ dmypy.json
 # Data files (sensitive)
 data/raw/
 data/processed/
-*.csv
-*.xlsx
-*.json
-*.parquet
+
+# Raw data files (exclude by default)
+*raw*.csv
+*original*.csv
+*unprocessed*.csv
+
+# Allow cleaned data files for research reproducibility
+!*cleaned*.csv
+!*processed*.csv
 
 # Large files
 *.mp4
@@ -150,11 +155,15 @@ plots/
 figures/
 results/
 output/
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.svg
+
+# Allow specific analysis outputs for research reproducibility
+!analysis_outputs/
+!analysis_outputs/*.png
+!analysis_outputs/*.jpg
+!analysis_outputs/*.jpeg
+!analysis_outputs/*.pdf
+!analysis_outputs/*.svg
+!analysis_outputs/*.md
 
 # Temporary files
 *.tmp
